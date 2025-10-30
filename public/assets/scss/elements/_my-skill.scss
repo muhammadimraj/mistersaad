@@ -55,8 +55,9 @@
             z-index: -1;
         }
         img {
-            max-height: 32px;
-            filter: invert(1);
+            max-height: 45px;
+            width: 45px;
+            object-fit: contain;
         }
     }
 

@@ -3,14 +3,12 @@ import React from "react";
 import Image from "next/image";
 
 const tools = [
-  { name: "React Native", icon: "fa-brands fa-react", color: "#61DAFB" },
-  { name: "Flutter", icon: "fa-solid fa-mobile-screen", color: "#02569B" },
-  { name: "iOS", icon: "fa-brands fa-apple", color: "#000000" },
-  { name: "Android", icon: "fa-brands fa-android", color: "#3DDC84" },
-  { name: "Node.js", icon: "fa-brands fa-node-js", color: "#339933" },
-  { name: "Firebase", icon: "fa-solid fa-fire", color: "#FFCA28" },
-  { name: "Swift", icon: "fa-brands fa-swift", color: "#FA7343" },
-  { name: "Kotlin", icon: "fa-solid fa-code", color: "#7F52FF" },
+  { name: "iOS", icon: "fa-brands fa-apple", type: "fontawesome", color: "#000000" },
+  { name: "Android", icon: "fa-brands fa-android", type: "fontawesome", color: "#3DDC84" },
+  { name: "Node.js", icon: "fa-brands fa-node-js", type: "fontawesome", color: "#339933" },
+  { name: "Firebase", icon: "fa-solid fa-fire", type: "fontawesome", color: "#FFCA28" },
+  { name: "Swift", icon: "fa-brands fa-swift", type: "fontawesome", color: "#FA7343" },
+  { name: "Kotlin", icon: "fa-solid fa-code", type: "fontawesome", color: "#7F52FF" },
 ];
 
 export default function ToolsTechnology() {

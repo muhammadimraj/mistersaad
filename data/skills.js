@@ -137,19 +137,19 @@ export const skillProgress = [
 export const skills = [
   {
     title: "React Native",
-    iconSrc: "/assets/images/icons/icon-01.png",
-    iconAlt: "my-skill-icon",
-    iconWidth: 22,
-    iconHeight: 32,
+    iconSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    iconAlt: "React Native",
+    iconWidth: 60,
+    iconHeight: 60,
     description:
       "React Native is a powerful framework for building native mobile applications using React.",
   },
   {
     title: "Flutter",
-    iconSrc: "/assets/images/icons/icon-02.png",
-    iconAlt: "my-skill-icon",
-    iconWidth: 30,
-    iconHeight: 19,
+    iconSrc: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    iconAlt: "Flutter",
+    iconWidth: 60,
+    iconHeight: 60,
     description:
       "Flutter is a powerful cross-platform framework for building beautiful and high-performance mobile applications.",
   },

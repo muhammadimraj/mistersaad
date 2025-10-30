@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 export default function About1() {
   return (
-    <section className="about-us-area tmp-section-gapBottom" id="about">
+    <section className="about-us-area tmp-section-gapBottom pt--60 pb--60" id="about">
       <div className="container">
         {/* tmp About Me Start */}
         <section className="about-us-area">

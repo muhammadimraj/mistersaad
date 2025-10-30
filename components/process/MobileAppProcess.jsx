@@ -28,7 +28,7 @@ export default function MobileAppProcess() {
   ];
 
   return (
-    <section className="mobile-app-process-area tmp-section-gap bg-dark-gradient" id="process">
+    <section className="mobile-app-process-area bg-dark-gradient" id="process">
       <div className="container">
         <div className="row mb--60">
           <div className="col-lg-12">

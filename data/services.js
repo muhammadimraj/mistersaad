@@ -45,26 +45,26 @@ export const serviceCardsExtra = [
 
 export const aboutUsCards = [
   {
-    iconClass: "fa-light fa-mobile",
+    iconClass: "fa-brands fa-apple",
     title: "iOS Application",
     para: "Complete development of high-performing iOS applications that are customized to suit Apple users.",
     animationOrder: 4,
     active: true,
   },
   {
-    iconClass: "fa-light fa-dashboard",
+    iconClass: "fa-solid fa-gauge",
     title: "Users Dashboard",
     para: "Simple-to-use dashboards enabling businesses to effortlessly update app content.",
     animationOrder: 5,
   },
   {
-    iconClass: "fa-light fa-mobile",
+    iconClass: "fa-brands fa-android",
     title: "Android Application",
     para: "Scalable Android solutions based on the latest technologies.",
     animationOrder: 4,
   },
   {
-    iconClass: "fa-light fa-code",
+    iconClass: "fa-solid fa-location-dot",
     title: "Location Tracking",
     para: "Smart tracking built into apps to track transport, delivery, and logistics.",
     animationOrder: 5,

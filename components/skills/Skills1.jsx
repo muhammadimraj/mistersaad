@@ -6,7 +6,7 @@ export default function Skills1({
 }) {
   return (
     <section className={parentClass} id="resume">
-      <div className="tpm-custom-box-bg position-relative overflow-hidden border--radious-20">
+      <div className="tpm-custom-box-bg position-relative overflow-hidden border--radious-20 mb--60">
         <div className="container">
           <div className="row">
             <div className="col-xxl-6 col-lg-12 col-md-12">

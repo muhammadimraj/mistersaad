@@ -16,8 +16,11 @@ export default function Portfolio1({
           <div className="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
             <span className="subtitle theme-gradient">Projects</span>
           </div>
+          <h2 className="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+            Innovative Mobile Apps Across Industries
+          </h2>
 
-          <p className="description">
+          <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
             I have provided effective projects to different industries and
             clients over the years. My apps are applied to various business
             models, including tourism, education, sports, and e-commerce. My

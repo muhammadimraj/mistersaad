@@ -41,20 +41,30 @@ export default function Header1({ navItems = navItemsDefault }) {
                   </nav>
                 </div>
                 <div className="tmp-header-right">
-                  <div className="social-share-wrapper d-none d-md-block">
-                    <div className="social-link">
-                      <a href="#">
-                        <i className="fa-brands fa-instagram" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-linkedin-in" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-twitter" />
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-facebook-f" />
-                      </a>
+                  <div className="header-contact-info d-none d-md-flex" style={{ 
+                    gap: '30px', 
+                    alignItems: 'center',
+                    marginRight: '20px'
+                  }}>
+                    <div className="contact-item" style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: '8px',
+                      color: 'var(--color-body)',
+                      fontSize: '14px'
+                    }}>
+                      <i className="fa-solid fa-location-dot" style={{ color: 'var(--color-primary)' }} />
+                      <span>Bay Square, Business Bay, Dubai</span>
+                    </div>
+                    <div className="contact-item" style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: '8px',
+                      color: 'var(--color-body)',
+                      fontSize: '14px'
+                    }}>
+                      <i className="fa-solid fa-phone" style={{ color: 'var(--color-primary)' }} />
+                      <a href="tel:+971553486284" style={{ color: 'var(--color-body)', textDecoration: 'none' }}>+971 55 3486 284</a>
                     </div>
                   </div>
                   <div className="tmp-side-collups-area d-block d-xl-none">

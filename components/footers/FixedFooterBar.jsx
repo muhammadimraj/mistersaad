@@ -22,9 +22,34 @@ export default function FixedFooterBar() {
         </div>
 
         <div className="footer-cta-section">
-          <a href="tel:+971553486284" className="footer-phone-btn">
-            <i className="fa-solid fa-phone"></i>
-            <span>+971 55 3486 284</span>
+          <a
+            href="tel:+971553486284"
+            className="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon btn-md"
+          >
+            <div className="icon-reverse-wrapper">
+              <span className="btn-text">+971 55 3486 284</span>
+              <div className="btn-hack" />
+              <Image
+                alt=""
+                className="btn-bg"
+                src="/assets/images/button/btg-bg.svg"
+                width={195}
+                height={56}
+              />
+              <Image
+                alt=""
+                className="btn-bg-hover"
+                src="/assets/images/button/btg-bg-2.svg"
+                width={193}
+                height={62}
+              />
+              <span className="btn-icon">
+                <i className="fa-solid fa-phone" />
+              </span>
+              <span className="btn-icon">
+                <i className="fa-solid fa-phone" />
+              </span>
+            </div>
           </a>
           
           <a

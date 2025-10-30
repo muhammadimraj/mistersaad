@@ -296,11 +296,10 @@ export const navItemsDefault = [
   { id: 1, href: "#home", text: "Home", className: "current" },
   { id: 2, href: "#service", text: "Services", className: "nav-item" },
   { id: 3, href: "#about", text: "About", className: "nav-item" },
-  { id: 4, href: "#resume", text: "Resume", className: "nav-item" },
-  { id: 5, href: "#portfolio", text: "Portfolio", className: "nav-item" },
-  { id: 6, href: "#pricing", text: "Pricing", className: "nav-item" },
-  { id: 7, href: "#contacts", text: "Contact", className: "nav-item" },
-  { id: 8, href: "#blog", text: "Blog", className: "nav-item" },
+  { id: 4, href: "#resume", text: "My Skills", className: "nav-item" },
+  { id: 5, href: "#portfolio", text: "Projects", className: "nav-item" },
+  { id: 6, href: "#contacts", text: "Contact", className: "nav-item" },
+  { id: 7, href: "#blog", text: "Blog", className: "nav-item" },
 ];
 
 export const navItems2 = [

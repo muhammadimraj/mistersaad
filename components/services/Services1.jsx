@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Services1() {
   return (
-    <div className="tmp-service-area tmp-section-gapBottom" id="service">
+    <div className="tmp-service-area tmp-section-gapBottom pt--60" id="service">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
