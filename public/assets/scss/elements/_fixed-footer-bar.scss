@@ -1,0 +1,206 @@
+@use "../default/variables";
+
+.fixed-footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-primary);
+  padding: 20px 40px;
+  z-index: 998;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+
+  @media #{variables.$large-mobile} {
+    padding: 15px 20px;
+  }
+}
+
+.footer-image-section {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  z-index: 999;
+
+  @media #{variables.$laptop-device} {
+    left: 30px;
+  }
+
+  @media #{variables.$md-layout} {
+    left: 20px;
+  }
+
+  @media #{variables.$large-mobile} {
+    display: none;
+  }
+
+  .footer-person-image {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+    display: block;
+
+    @media #{variables.$laptop-device} {
+      width: 150px;
+      height: 150px;
+    }
+
+    @media #{variables.$md-layout} {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
+
+.fixed-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+  gap: 30px;
+  position: relative;
+  padding-left: 200px;
+
+  @media #{variables.$laptop-device} {
+    gap: 20px;
+    padding-left: 170px;
+  }
+
+  @media #{variables.$md-layout} {
+    padding-left: 150px;
+  }
+
+  @media #{variables.$large-mobile} {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 20px;
+  }
+}
+
+
+.footer-text-section {
+  flex: 1;
+  color: #ffffff;
+
+  @media #{variables.$large-mobile} {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    color: #ffffff;
+
+    @media #{variables.$laptop-device} {
+      font-size: 20px;
+    }
+
+    @media #{variables.$large-mobile} {
+      font-size: 18px;
+    }
+  }
+
+  .footer-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 0;
+    opacity: 0.9;
+    color: #ffffff;
+
+    @media #{variables.$laptop-device} {
+      font-size: 14px;
+    }
+
+    @media #{variables.$large-mobile} {
+      font-size: 13px;
+      margin: 3px 0 0;
+    }
+  }
+}
+
+.footer-cta-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+
+  @media #{variables.$large-mobile} {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
+
+.footer-phone-btn {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  @media #{variables.$large-mobile} {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  i {
+    font-size: 18px;
+
+    @media #{variables.$large-mobile} {
+      font-size: 16px;
+    }
+  }
+
+  &:hover {
+    background: #ffffff;
+    color: #7b3fa5;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+  }
+}
+
+.footer-whatsapp-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  @media #{variables.$large-mobile} {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background: #20BA5A;
+    transform: scale(1.1);
+  }
+}
+
+// Add padding to body to prevent content from being hidden behind fixed footer
+body {
+  padding-bottom: 120px;
+
+  @media #{variables.$large-mobile} {
+    padding-bottom: 140px;
+  }
+}
+
