@@ -42,10 +42,7 @@ export default function Header1({ navItems = navItemsDefault }) {
                 </div>
                 <div className="tmp-header-right">
                   <div className="header-contact-info d-none d-xl-flex">
-                    <div className="contact-item">
-                      <i className="fa-solid fa-location-dot" />
-                      <span>Bay Square, Business Bay, Dubai</span>
-                    </div>
+                    
                     <div className="contact-item">
                       <i className="fa-solid fa-phone" />
                       <a href="tel:+971553486284">+971 55 3486 284</a>
