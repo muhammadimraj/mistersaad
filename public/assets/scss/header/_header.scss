@@ -57,6 +57,41 @@
     gap: 25px;
   }
 
+  .header-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 20px;
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-body);
+      font-size: 14px;
+      white-space: nowrap;
+      
+      i {
+        color: var(--color-primary);
+        font-size: 14px;
+      }
+      
+      a {
+        color: var(--color-body);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+      
+      span {
+        color: var(--color-body);
+      }
+    }
+  }
+
   &.header--transparent {
     position: absolute;
     width: 100%;

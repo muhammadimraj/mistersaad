@@ -41,30 +41,14 @@ export default function Header1({ navItems = navItemsDefault }) {
                   </nav>
                 </div>
                 <div className="tmp-header-right">
-                  <div className="header-contact-info d-none d-md-flex" style={{ 
-                    gap: '30px', 
-                    alignItems: 'center',
-                    marginRight: '20px'
-                  }}>
-                    <div className="contact-item" style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: '8px',
-                      color: 'var(--color-body)',
-                      fontSize: '14px'
-                    }}>
-                      <i className="fa-solid fa-location-dot" style={{ color: 'var(--color-primary)' }} />
+                  <div className="header-contact-info d-none d-xl-flex">
+                    <div className="contact-item">
+                      <i className="fa-solid fa-location-dot" />
                       <span>Bay Square, Business Bay, Dubai</span>
                     </div>
-                    <div className="contact-item" style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: '8px',
-                      color: 'var(--color-body)',
-                      fontSize: '14px'
-                    }}>
-                      <i className="fa-solid fa-phone" style={{ color: 'var(--color-primary)' }} />
-                      <a href="tel:+971553486284" style={{ color: 'var(--color-body)', textDecoration: 'none' }}>+971 55 3486 284</a>
+                    <div className="contact-item">
+                      <i className="fa-solid fa-phone" />
+                      <a href="tel:+971553486284">+971 55 3486 284</a>
                     </div>
                   </div>
                   <div className="tmp-side-collups-area d-block d-xl-none">
