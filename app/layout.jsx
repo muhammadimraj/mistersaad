@@ -10,6 +10,12 @@ import FixedFooterBar from "@/components/footers/FixedFooterBar";
 import Sidebar from "@/components/common/Sidebar";
 import GlobalEffectsProvider from "@/components/common/GlobalEffectsProvider";
 import { ToastContainer } from "react-toastify";
+
+export const metadata = {
+  title: "Muhammad Saad - Mobile App Developer",
+  description: "Professional Mobile App Developer in Dubai",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
