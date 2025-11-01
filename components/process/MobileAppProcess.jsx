@@ -30,6 +30,7 @@ export default function MobileAppProcess() {
   return (
     <section className="mobile-app-process-area bg-dark-gradient" id="process">
       <div className="container">
+        {/* Heading Section */}
         <div className="row mb--60">
           <div className="col-lg-12">
             <div className="section-head text-center">
@@ -43,9 +44,10 @@ export default function MobileAppProcess() {
           </div>
         </div>
 
-        <div className="row align-items-center">
+        {/* First Row: Content Left, Image Right */}
+        <div className="row align-items-center mb--80">
           <div className="col-lg-6 col-md-12 mb--30">
-            {processSteps.map((step, idx) => (
+            {processSteps.slice(0, 2).map((step, idx) => (
               <div key={idx} className="process-step-wrapper mb--40">
                 <div className="process-step-content">
                   <h3 className="process-title" style={{ fontSize: '28px', marginBottom: '10px', fontWeight: '700' }}>
@@ -58,7 +60,7 @@ export default function MobileAppProcess() {
                     {step.description}
                   </p>
                 </div>
-                {idx < processSteps.length - 1 && (
+                {idx === 0 && (
                   <div style={{ marginTop: '40px', marginBottom: '40px', height: '1px', background: 'rgba(255,255,255,0.1)' }}></div>
                 )}
               </div>
@@ -67,7 +69,63 @@ export default function MobileAppProcess() {
 
           <div className="col-lg-6 col-md-12">
             <div className="process-image-wrapper" style={{ position: 'relative', padding: '40px' }}>
-              <Image src="/assets/saad-images/process.jpg" alt="Mobile App Process" width={500} height={500} />
+              <Image 
+                src="/assets/images/latest-portfolio/tab-image-6.png" 
+                alt="Mobile App Process" 
+                width={500} 
+                height={500}
+                style={{ borderRadius: '20px', width: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Second Row: Image Left, Content Right */}
+        <div className="row align-items-center">
+          <div className="col-lg-6 col-md-12 order-lg-1 order-2">
+            <div className="process-image-wrapper" style={{ position: 'relative', padding: '40px' }}>
+              <Image 
+                src="/assets/images/latest-portfolio/tab-image-5.png" 
+                alt="Mobile App Development" 
+                width={500} 
+                height={500}
+                style={{ borderRadius: '20px', width: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+
+          <div className="col-lg-6 col-md-12 order-lg-2 order-1 mb--30">
+            <div className="process-step-wrapper">
+              <div className="process-step-content">
+                <h3 className="process-title" style={{ fontSize: '28px', marginBottom: '10px', fontWeight: '700' }}>
+                  {processSteps[2].title}
+                </h3>
+                <h4 className="process-subtitle" style={{ fontSize: '28px', marginBottom: '20px', fontWeight: '700' }}>
+                  {processSteps[2].subtitle}
+                </h4>
+                <p className="description" style={{ marginBottom: '30px' }}>
+                  {processSteps[2].description}
+                </p>
+
+                {/* Additional Content Section */}
+                <div style={{ marginTop: '40px' }}>
+                  <h4 className="process-subtitle" style={{ fontSize: '24px', marginBottom: '15px', fontWeight: '700' }}>
+                    POST-LAUNCH SUPPORT
+                  </h4>
+                  <p className="description" style={{ marginBottom: '20px' }}>
+                    My commitment doesn't end at launch. I provide ongoing support and maintenance to ensure your app continues to perform optimally. This includes regular updates, bug fixes, feature enhancements, and adapting to new OS versions and device requirements.
+                  </p>
+                </div>
+
+                <div style={{ marginTop: '30px' }}>
+                  <h4 className="process-subtitle" style={{ fontSize: '24px', marginBottom: '15px', fontWeight: '700' }}>
+                    PERFORMANCE MONITORING
+                  </h4>
+                  <p className="description">
+                    I implement analytics and monitoring tools to track your app's performance, user engagement, and identify areas for improvement. This data-driven approach ensures your app evolves with user needs and market trends.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

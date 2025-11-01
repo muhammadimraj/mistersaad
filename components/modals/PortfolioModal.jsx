@@ -1,5 +1,6 @@
 "use client";
 import { useContent } from "@/contexts/ContentContext";
+import Link from "next/link";
 import React from "react";
 
 export default function PortfolioModal() {
@@ -45,19 +46,13 @@ export default function PortfolioModal() {
                 <div className="text-content">
                   <h3>{currentPortfolio.title}</h3>
                   <p className="mb--30">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cupiditate distinctio assumenda explicabo veniam temporibus
-                    eligendi.
-                  </p>
-                  <p>
-                    Consectetur adipisicing elit. Cupiditate distinctio
-                    assumenda. dolorum alias suscipit rerum maiores aliquam
-                    earum odit, nihil culpa quas iusto hic minus!
+                    {currentPortfolio.description || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi."}
                   </p>
                   <div className="button-group button-group-pd mt--20">
                     <a
                       className="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon"
                       href="#"
+                      onClick={(e) => e.preventDefault()}
                     >
                       <div className="icon-reverse-wrapper">
                         <span className="btn-text">LIKE THIS</span>
@@ -84,12 +79,13 @@ export default function PortfolioModal() {
                         </span>
                       </div>
                     </a>
-                    <a
+                    <Link
+                      href={`/project/${currentPortfolio.id}`}
                       className="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon"
-                      href="#"
+                      data-bs-dismiss="modal"
                     >
                       <div className="icon-reverse-wrapper">
-                        <span className="btn-text">VIEW PROJECTS</span>
+                        <span className="btn-text">VIEW PROJECT</span>
                         <div className="btn-hack" />
                         <img
                           alt=""
@@ -112,7 +108,7 @@ export default function PortfolioModal() {
                           <i className="fa-regular fa-chevron-right" />
                         </span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* End of .text-content */}

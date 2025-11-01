@@ -262,3 +262,11 @@
         padding: 18px;
     }
 }
+
+// About image offset for desktop
+.about-image-offset {
+    @media (min-width: 992px) {
+        position: relative;
+        top: -85px;
+    }
+}

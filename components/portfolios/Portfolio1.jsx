@@ -1,13 +1,38 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { portfolioItems2 } from "@/data/portfolio";
 import { useContent } from "@/contexts/ContentContext";
+
 export default function Portfolio1({
   parentClass = "latest-portfolio-area custom-column-grid tmp-section-gap",
 }) {
   const { setCurrentPortfolio } = useContent();
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState(portfolioItems2);
 
+  // Mobile App Development categories
+  const categories = [
+    "All",
+    "Android",
+    "iOS",
+    "Figma",
+    "Firebase",
+    "SQLite",
+    "Flutter",
+  ];
+
+  useEffect(() => {
+    if (activeCategory === "All") {
+      setFilteredProjects(portfolioItems2);
+    } else {
+      const filtered = portfolioItems2.filter((item) =>
+        item.categories?.includes(activeCategory)
+      );
+      setFilteredProjects(filtered);
+    }
+  }, [activeCategory]);
 
   return (
     <section className={parentClass} id="portfolio">
@@ -33,6 +58,79 @@ export default function Portfolio1({
             important value to a certain degree.
           </p>
         </div>
+
+        {/* Category Filter Buttons */}
+        <div className="portfolio-filter-tabs mb--50">
+          <div className="filter-button-group" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'nowrap',
+            gap: '10px',
+            marginBottom: '40px',
+            overflowX: 'auto',
+          }}>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`nav-link ${activeCategory === category ? 'active' : ''}`}
+                onMouseEnter={(e) => {
+                  if (activeCategory !== category) {
+                    e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (activeCategory !== category) {
+                    e.target.style.background = 'rgba(255, 255, 255, 0.05)';
+                  }
+                }}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <style jsx>{`
+            .nav-link {
+              padding: 10px 25px;
+              border-radius: 10px;
+              color: var(--color-heading);
+              font-family: var(--font-primary);
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 27px;
+              background: var(--color-gray-2);
+              border: none;
+              letter-spacing: .5px;
+              position: relative;
+              overflow: hidden;
+              width: auto;
+            }
+            .nav-link.active::after {
+              opacity: .5;
+            }
+            .nav-link::after {
+              position: absolute;
+              content: "";
+              width: 40px;
+              height: 40px;
+              background: var(--color-primary);
+              left: 50%;
+              bottom: -20px;
+              transform: translateX(-50%);
+              border-radius: 100%;
+              filter: blur(15px);
+              opacity: 0;
+              transition: .4s;
+            }
+            @media (max-width: 1024px) {
+              .filter-button-group {
+                flex-wrap: wrap !important;
+                overflow-x: visible !important;
+              }
+            }
+          `}</style>
+        </div>
+
         <div className="latest-portfolio-tabs-area">
           <div className="tab-content bg-blur-style-one" id="nav-tabContent">
             <div
@@ -43,7 +141,7 @@ export default function Portfolio1({
               tabIndex={0}
             >
               <div className="row animation-action-3">
-                {portfolioItems2.map((item, index) => (
+                {filteredProjects.map((item, index) => (
                   <div className="col-lg-6 col-md-6 paralax-image" key={index}>
                     <div
                       className={`latest-portfolio-card-style-two image-box-hover tmp-scroll-trigger single-animation active tmponhover tmp-fade-in animation-order-${
@@ -58,6 +156,7 @@ export default function Portfolio1({
                           <a
                             className="tmp-scroll-trigger tmp-zoom-in animation-order-1"
                             href="#"
+                            onClick={(e) => e.preventDefault()}
                           >
                             <Image
                               className="w-100"
@@ -69,53 +168,57 @@ export default function Portfolio1({
                           </a>
                         </div>
                       </div>
-                      <div className="portfolio-card-content-wrap">
-                        <div className="content-left">
-                          <h3 className="portfolio-card-title">
-                            <a href="#">{item.title}</a>
-                          </h3>
-                          <div className="tag-items">
-                            <ul>
-                              {item.tags.map((tag, tagIndex) => (
-                                <li key={tagIndex}>
-                                  <a href="#" className="tag-item">
-                                    {tag}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
+                        <div className="portfolio-card-content-wrap">
+                          <div className="content-left">
+                            <h3 className="portfolio-card-title">
+                              <a href="#" onClick={(e) => e.preventDefault()}>{item.title}</a>
+                            </h3>
+                            <div className="tag-items">
+                              <ul>
+                                {item.tags.map((tag, tagIndex) => (
+                                  <li key={tagIndex}>
+                                    <a href="#" className="tag-item" onClick={(e) => e.preventDefault()}>
+                                      {tag}
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
+                          <a
+                            href="#"
+                            className="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon btn-md"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                            }}
+                          >
+                            <div className="icon-reverse-wrapper">
+                              <span className="btn-text">View Details</span>
+                              <div className="btn-hack" />
+                              <Image
+                                alt=""
+                                className="btn-bg"
+                                src="/assets/images/button/btg-bg.svg"
+                                width={195}
+                                height={56}
+                              />
+                              <Image
+                                alt=""
+                                className="btn-bg-hover"
+                                src="/assets/images/button/btg-bg-2.svg"
+                                width={193}
+                                height={62}
+                              />
+                              <span className="btn-icon">
+                                <i className="fa-sharp fa-regular fa-arrow-right" />
+                              </span>
+                              <span className="btn-icon">
+                                <i className="fa-sharp fa-regular fa-arrow-right" />
+                              </span>
+                            </div>
+                          </a>
                         </div>
-                        <a
-                          className="tmp-btn hover-icon-reverse btn-border tmp-modern-button radius-round download-icon btn-md"
-                          href="#"
-                        >
-                          <div className="icon-reverse-wrapper">
-                            <span className="btn-text">View Details</span>
-                            <div className="btn-hack" />
-                            <Image
-                              alt=""
-                              className="btn-bg"
-                              src="/assets/images/button/btg-bg.svg"
-                              width={195}
-                              height={56}
-                            />
-                            <Image
-                              alt=""
-                              className="btn-bg-hover"
-                              src="/assets/images/button/btg-bg-2.svg"
-                              width={193}
-                              height={62}
-                            />
-                            <span className="btn-icon">
-                              <i className="fa-sharp fa-regular fa-arrow-right" />
-                            </span>
-                            <span className="btn-icon">
-                              <i className="fa-sharp fa-regular fa-arrow-right" />
-                            </span>
-                          </div>
-                        </a>
-                      </div>
                       <div className="tmp-light light-center" />
                     </div>
                   </div>

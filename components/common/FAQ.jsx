@@ -62,10 +62,6 @@ export default function FAQ() {
                 <span className="subtitle theme-gradient">Common Questions</span>
               </div>
               <h2 className="title split-collab">Frequently Asked Queries</h2>
-              <p className="description mt--20">
-                I recommend going through the following FAQs to better understand 
-                how application projects work in Dubai.
-              </p>
             </div>
           </div>
         </div>

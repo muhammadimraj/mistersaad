@@ -9,7 +9,7 @@ export default function WhyHireDubaiDeveloper() {
           <div className="col-lg-6 col-md-12">
             <div className="developer-image-wrapper tmp-scroll-trigger tmp-fade-in animation-order-1">
               <Image
-                src="/assets/saad-images/hire.jpg"
+                src="/assets/images/latest-portfolio/tab-image-6.png"
                 alt="App Developer in Dubai"
                 width={600}
                 height={600}

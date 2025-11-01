@@ -64,7 +64,7 @@ export default function HowToHire() {
 
           <div className="col-lg-6 col-md-12">
             <div className="process-image-wrapper" style={{ position: 'relative', padding: '40px' }}>
-               <Image src="/assets/saad-images/hire.jpg" alt="How To Hire" width={500} height={500} />
+               <Image src="/assets/images/latest-portfolio/tab-image-6.png" alt="How To Hire" width={500} height={500} />
             </div>
           </div>
         </div>

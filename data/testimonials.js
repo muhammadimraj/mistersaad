@@ -114,11 +114,20 @@ export const testimonials2 = [
 
 export const misterSaadTestimonials = [
   {
+    name: "Ms. Fatima Mansour",
+    role: "Client",
+    image: "/assets/saad-images/client3.jpg",
+    content:
+      "We found Saad very honest and professional. He advised us during the project and some of his suggestions were helpful for our business. Strongly recommend him for application projects.",
+    mention: "",
+    ending: "",
+  },
+  {
     name: "Mr. Faizan Shekha",
     role: "Client",
     image: "/assets/saad-images/client2.jpg",
     content:
-      "I was looking for honest application development in Dubai and I found Saad from Google. When I met him the first time, I had a feeling that he's the right person. After launching our application, I can say that our decision to hire him was the right choice. I found him as a professional, experienced and honest developer.",
+      "I was looking for honest application development in Dubai and I found Saad from Google. When I met him the first time, I had a feeling that he's the right person. After launching our application, I can say our decision to hire him was the right choice.",
     mention: "",
     ending: "",
   },
@@ -127,16 +136,25 @@ export const misterSaadTestimonials = [
     role: "Client",
     image: "/assets/saad-images/client1.jpg",
     content:
-      "My Company was looking for a app development company and we found Saad. We are very satisfied with the work. Thank you Saad 🙂",
+      "My company was looking for an app development company and we found Saad. We are very satisfied with the work and his professional approach. Thank you Saad for delivering an excellent product.",
     mention: "",
     ending: "",
   },
   {
-    name: "Ms. Fatima Mansour",
+    name: "Mr. Ahmed Al-Farsi",
+    role: "Client",
+    image: "/assets/saad-images/client2.jpg",
+    content:
+      "Saad delivered our mobile app on time and within budget. His technical expertise and problem-solving skills are exceptional. The app performs flawlessly and our users love it. Highly recommended.",
+    mention: "",
+    ending: "",
+  },
+  {
+    name: "Ms. Sarah Johnson",
     role: "Client",
     image: "/assets/saad-images/client3.jpg",
     content:
-      "We found Saad very honest and professional. He advised us during the project and some of his suggestions were helpful for our business. Strongly recommend him for application projects.",
+      "Working with Saad was a great experience. He understood our requirements perfectly and provided valuable suggestions throughout the development. The final product exceeded our expectations completely.",
     mention: "",
     ending: "",
   },

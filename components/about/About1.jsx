@@ -10,12 +10,12 @@ export default function About1() {
             <div className="row align-items-center animation-action-3">
               <div className="col-lg-6 pr--50 pr_lg--10 pr_md--10 pr_sm--10">
                 <div className="about-us-left-content-wrap paralax-image">
-                  <div className="about-thumbnail-large-style-two about-us-card tmponhover single-animation active">
+                  <div className="about-thumbnail-large-style-two about-us-card tmponhover single-animation active about-image-offset">
                     <Image
                       alt="about"
                       src="/assets/saad-images/saad.png"
                       width={940}
-                      height={1068}
+                      height={500}
                     />
                     <div className="tmp-light light-center" />
                   </div>
