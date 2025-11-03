@@ -235,11 +235,11 @@
     .portfolio-card-title {
         color: var(--color-heading);
         font-family: var(--font-primary);
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 700;
         line-height: 42px;
         text-transform: capitalize;
-        margin-top: 20px;
+        margin-top: 0px;
         margin-bottom: 13px;
         @media #{variables.$md-layout} {
             font-size: 24px;
@@ -390,7 +390,7 @@
             }
         }
         img {
-            border-radius: 20px;
+            border-radius: 0px;
             width: 100%;
             object-fit: cover;
         }

@@ -122,7 +122,7 @@
         position: sticky;
         top: 100px;
         @media (min-width: 576px) {
-            padding-right: 100px;
+            padding-right: 0px;
         }
 
         @media #{variables.$md-layout} {

@@ -2,8 +2,11 @@
 
 import { navItemsDefault } from "@/data/menu";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Nav2({ navItems = navItemsDefault }) {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState(
     navItems[0].href.replace("#", "")
   );
@@ -24,12 +27,14 @@ export default function Nav2({ navItems = navItemsDefault }) {
       }
     );
 
-    // Observe each section
+    // Observe each section (only hash links)
     setTimeout(() => {
       navItems.forEach((elm) => {
-        const element = document.querySelector(elm.href);
-        if (element) {
-          observer.observe(element);
+        if (elm.href.startsWith("#")) {
+          const element = document.querySelector(elm.href);
+          if (element) {
+            observer.observe(element);
+          }
         }
       });
     });
@@ -39,11 +44,23 @@ export default function Nav2({ navItems = navItemsDefault }) {
     };
   }, [navItems]);
 
-  const handleClick = (e, id) => {
-    e.preventDefault();
-    document
-      .querySelector(id)
-      ?.scrollIntoView({ behavior: "smooth", block: "center" });
+  const handleClick = (e, href) => {
+    // Only handle smooth scroll for hash links
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      document
+        .querySelector(href)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  const isActive = (item) => {
+    // For regular links, check if pathname matches
+    if (!item.href.startsWith("#")) {
+      return pathname === item.href;
+    }
+    // For hash links, check active section
+    return activeSection === item.href.replace("#", "");
   };
 
   return (
@@ -51,13 +68,17 @@ export default function Nav2({ navItems = navItemsDefault }) {
       {navItems.map((item) => (
         <li
           key={item.id}
-          className={
-            activeSection == item.href.replace("#", "") ? "current" : ""
-          }
+          className={isActive(item) ? "current" : ""}
         >
-          <a onClick={(e) => handleClick(e, item.href)} href={item.href}>
-            {item.text}
-          </a>
+          {item.href.startsWith("#") ? (
+            <a onClick={(e) => handleClick(e, item.href)} href={item.href}>
+              {item.text}
+            </a>
+          ) : (
+            <Link href={item.href}>
+              {item.text}
+            </Link>
+          )}
         </li>
       ))}
     </>

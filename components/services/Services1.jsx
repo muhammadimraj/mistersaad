@@ -29,13 +29,12 @@ export default function Services1() {
                     active ? "active" : ""
                   }`}
                 >
-                  <div className="card-head">
+                  <div className="card-head d-flex gap-4 align-items-center">
                     <div className="logo-img">
                       <i className={iconClass} />
                     </div>
                     <h3 className="card-title">{title}</h3>
                   </div>
-                  <p className="card-para">{para}</p>
                   <div className="tmp-light light-center" />
                 </div>
               </div>

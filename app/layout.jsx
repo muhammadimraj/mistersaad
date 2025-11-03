@@ -1,7 +1,6 @@
 import "../public/assets/scss/main.scss";
 import "odometer/themes/odometer-theme-default.css"; // Import theme
 import Script from "next/script";
-import PortfolioModal from "@/components/modals/PortfolioModal";
 import BlogModal from "@/components/modals/BlogModal";
 import { ContentProvider } from "@/contexts/ContentContext";
 import ScrollTop from "@/components/common/ScrollTop";
@@ -34,7 +33,6 @@ export default function RootLayout({ children }) {
           {children}
 
           <div className="modals-wrapper">
-            <PortfolioModal />
             <BlogModal />
             <Sidebar />
           </div>

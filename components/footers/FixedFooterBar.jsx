@@ -9,8 +9,8 @@ export default function FixedFooterBar() {
         <Image
           src="/assets/saad-images/saad.png"
           alt="Saad"
-          width={180}
-          height={180}
+          width={150}
+          height={150}
           className="footer-person-image"
         />
       </div>

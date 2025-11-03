@@ -2,9 +2,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { navItems5 } from "@/data/menu";
 
 export default function SidebarNav() {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState(
     navItems5[0].href.replace("#", "")
   );
@@ -25,12 +27,14 @@ export default function SidebarNav() {
       }
     );
 
-    // Observe each section
+    // Observe each section (only hash links)
     setTimeout(() => {
       navItems5.forEach((elm) => {
-        const element = document.querySelector(elm.href);
-        if (element) {
-          observer.observe(element);
+        if (elm.href.startsWith("#")) {
+          const element = document.querySelector(elm.href);
+          if (element) {
+            observer.observe(element);
+          }
         }
       });
     });
@@ -40,11 +44,23 @@ export default function SidebarNav() {
     };
   }, [navItems5]);
 
-  const handleClick = (e, id) => {
-    e.preventDefault();
-    document
-      .querySelector(id)
-      ?.scrollIntoView({ behavior: "smooth", block: "center" });
+  const handleClick = (e, href) => {
+    // Only handle smooth scroll for hash links
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      document
+        .querySelector(href)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  const isActive = (item) => {
+    // For regular links, check if pathname matches
+    if (!item.href.startsWith("#")) {
+      return pathname === item.href;
+    }
+    // For hash links, check active section
+    return activeSection === item.href.replace("#", "");
   };
   return (
     <div className="d-none d-xl-block header-style-2">
@@ -69,32 +85,52 @@ export default function SidebarNav() {
                 <li
                   key={item.text}
                   className={
-                    activeSection == item.href.replace("#", "")
+                    isActive(item)
                       ? "nav-item current"
                       : "nav-item"
                   }
                 >
-                  <a
-                    className="nav-link smoth-animation"
-                    href={item.href}
-                    onClick={(e) => handleClick(e, item.href)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className={`feather feather-${item.text.toLowerCase()}`}
+                  {item.href.startsWith("#") ? (
+                    <a
+                      className="nav-link smoth-animation"
+                      href={item.href}
+                      onClick={(e) => handleClick(e, item.href)}
                     >
-                      {item.icon}
-                    </svg>
-                    {item.text}
-                  </a>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`feather feather-${item.text.toLowerCase()}`}
+                      >
+                        {item.icon}
+                      </svg>
+                      {item.text}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="nav-link smoth-animation">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`feather feather-${item.text.toLowerCase()}`}
+                      >
+                        {item.icon}
+                      </svg>
+                      {item.text}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { misterSaadProjects } from "@/data/portfolio";
 
 export default function PortfolioMisterSaad() {
@@ -24,25 +25,27 @@ export default function PortfolioMisterSaad() {
         </div>
         <div className="row g-5">
           {misterSaadProjects.map((project, idx) => (
-            <div key={idx} className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="portfolio-card-mister-saad single-animation tmponhover">
-                <div className="thumbnail">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={400}
-                    height={300}
-                    style={{ objectFit: "cover", width: "100%", height: "250px" }}
-                  />
+            <div key={idx} className={`col-lg-4 col-md-6 col-sm-6 col-12 ${idx % 2 === 0 ? 'pe-lg-0' : ''}`}>
+              <Link href={`/project/${project.id}`}>
+                <div className="portfolio-card-mister-saad single-animation tmponhover" style={{ cursor: 'pointer' }}>
+                  <div className="thumbnail">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={300}
+                      style={{ objectFit: "cover", width: "100%", height: "250px" }}
+                    />
+                  </div>
+                  <div className="portfolio-content">
+                    <h4 className="title">{project.title}</h4>
+                    {project.description && (
+                      <p className="description">{project.description}</p>
+                    )}
+                  </div>
+                  <div className="tmp-light light-center" />
                 </div>
-                <div className="portfolio-content">
-                  <h4 className="title">{project.title}</h4>
-                  {project.description && (
-                    <p className="description">{project.description}</p>
-                  )}
-                </div>
-                <div className="tmp-light light-center" />
-              </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function Footer1({
-  parentClass = "tmp-footer-area footer-style-4 tmp-section-gapTop pb--50",
+  parentClass = "tmp-footer-area footer-style-4 pt--50 pb--50",
 }) {
   return (
     <div className={parentClass}>

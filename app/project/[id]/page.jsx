@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
-import { portfolioItems2 } from "@/data/portfolio";
+import { portfolioItems2, misterSaadProjects } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import Header1 from "@/components/headers/Header1";
@@ -11,7 +11,9 @@ export default function ProjectDetailsPage() {
   const params = useParams();
   const projectId = parseInt(params.id);
   
-  const project = portfolioItems2.find((item) => item.id === projectId);
+  // Combine all portfolio sources
+  const allProjects = [...portfolioItems2, ...misterSaadProjects];
+  const project = allProjects.find((item) => item.id === projectId);
 
   if (!project) {
     return (
@@ -70,24 +72,6 @@ export default function ProjectDetailsPage() {
                 }}>
                   {project.title}
                 </h1>
-                <div className="tag-items">
-                  <ul style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', padding: 0, listStyle: 'none' }}>
-                    {project.tags.map((tag, index) => (
-                      <li key={index}>
-                        <span className="tag-item" style={{
-                          padding: '8px 20px',
-                          borderRadius: '20px',
-                          background: 'var(--color-gray-2)',
-                          color: 'var(--color-primary)',
-                          fontSize: '14px',
-                          fontWeight: '600'
-                        }}>
-                          {tag}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           </div>

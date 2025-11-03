@@ -297,7 +297,7 @@ export const navItemsDefault = [
   { id: 2, href: "#service", text: "Services", className: "nav-item" },
   { id: 3, href: "#about", text: "About", className: "nav-item" },
   { id: 4, href: "#resume", text: "My Skills", className: "nav-item" },
-  { id: 5, href: "#portfolio", text: "Projects", className: "nav-item" },
+  { id: 5, href: "/projects", text: "Projects", className: "nav-item" },
   { id: 6, href: "#contacts", text: "Contact", className: "nav-item" },
   { id: 7, href: "#blog", text: "Blog", className: "nav-item" },
 ];
@@ -306,7 +306,7 @@ export const navItems2 = [
   { id: 1, href: "#home", text: "Home", className: "current" },
   { id: 2, href: "#about", text: "About", className: "" },
   { id: 3, href: "#service", text: "Services", className: "" },
-  { id: 4, href: "#portfolio", text: "Project", className: "" },
+  { id: 4, href: "/projects", text: "Project", className: "" },
   { id: 5, href: "#blog", text: "Blog", className: "" },
   { id: 6, href: "#contacts", text: "Contact", className: "" },
 ];
@@ -315,7 +315,7 @@ export const navItems3 = [
   { id: 1, href: "#home", text: "Home", className: "current" },
   { id: 2, href: "#about", text: "About", className: "" },
   { id: 3, href: "#service", text: "Services", className: "" },
-  { id: 4, href: "#portfolio", text: "Project", className: "" },
+  { id: 4, href: "/projects", text: "Project", className: "" },
   { id: 5, href: "#pricing", text: "Pricing", className: "" },
   { id: 6, href: "#blog", text: "Blog", className: "" },
   { id: 7, href: "#contacts", text: "Contact", className: "" },
@@ -325,7 +325,7 @@ export const navItems4 = [
   { id: 1, href: "#home", text: "Home", liClass: "current" },
   { id: 2, href: "#about", text: "About", liClass: "nav-item" },
   { id: 3, href: "#service", text: "Services", liClass: "nav-item" },
-  { id: 4, href: "#portfolio", text: "Portfolio", liClass: "nav-item" },
+  { id: 4, href: "/projects", text: "Portfolio", liClass: "nav-item" },
   { id: 5, href: "#resume", text: "Resume", liClass: "nav-item" },
   { id: 6, href: "#pricing", text: "Pricing", liClass: "nav-item" },
   { id: 7, href: "#blog", text: "Blog", liClass: "nav-item" },
@@ -358,7 +358,7 @@ export const navItems5 = [
   {
     id: 3,
     text: "Portfolio",
-    href: "#portfolio",
+    href: "/projects",
     icon: (
       <>
         <polygon points="12 2 2 7 12 12 22 7 12 2" />

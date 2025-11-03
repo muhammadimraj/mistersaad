@@ -20,10 +20,21 @@ export default function Skills1({
                     Gained Skill
                   </h2>
                   <p className="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                    Business consulting consultants provide expert advice and
-                    guida busi nesses to help them improve their performance,
-                    efficiency, and organ izational Business consulting
-                    consultants provide
+                    With over 20 years of experience in mobile app development, I have mastered the most powerful 
+                    frameworks and technologies in the industry. My expertise spans across React Native for 
+                    cross-platform development, Flutter for beautiful and high-performance applications, and Native 
+                    technologies for maximum device optimization.
+                  </p>
+                  <p className="description tmp-scroll-trigger tmp-fade-in animation-order-4" style={{ marginTop: '20px' }}>
+                    I specialize in building scalable, efficient, and user-friendly mobile applications that meet 
+                    the highest standards of quality. Whether it's iOS or Android, I leverage the right technology 
+                    stack to deliver exceptional results that drive business growth and user satisfaction.
+                  </p>
+                  <p className="description tmp-scroll-trigger tmp-fade-in animation-order-5" style={{ marginTop: '20px' }}>
+                    My technical proficiency extends to backend development with Node.js and Express.js, enabling 
+                    me to create complete end-to-end solutions. I stay current with the latest industry trends and 
+                    best practices to ensure your mobile applications are built using cutting-edge technology and 
+                    innovative approaches.
                   </p>
                 </div>
               </div>
