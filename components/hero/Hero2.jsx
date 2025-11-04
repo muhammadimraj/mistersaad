@@ -154,6 +154,100 @@ export default function Hero2({ light = false }) {
                   business objectives and user requirements, I provide them using React 
                   Native, Flutter, or Native technologies.
                 </p>
+
+                {/* My Skills Section */}
+                <div className="tmp-scroll-trigger tmp-fade-in animation-order-4" style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '30px',
+                  marginTop: '40px',
+                  flexWrap: 'wrap'
+                }}>
+                  <h3 style={{
+                    fontSize: '24px',
+                    fontWeight: '700',
+                    color: 'var(--color-heading)',
+                    margin: 0
+                  }}>
+                    My Skills
+                  </h3>
+                  
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px'
+                  }}>
+                    {/* React Native Logo */}
+                    <div style={{
+                      width: '50px',
+                      height: '50px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(97, 218, 251, 0.1)',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+                        <path d="M12 4c-4.97 0-9 1.79-9 4v8c0 2.21 4.03 4 9 4s9-1.79 9-4V8c0-2.21-4.03-4-9-4z" stroke="#61DAFB" strokeWidth="1.5" fill="none"/>
+                        <path d="M3 8c0 2.21 4.03 4 9 4s9-1.79 9-4" stroke="#61DAFB" strokeWidth="1.5" fill="none"/>
+                      </svg>
+                    </div>
+
+                    {/* Flutter Logo */}
+                    <div style={{
+                      width: '50px',
+                      height: '50px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(2, 125, 253, 0.1)',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <path d="M14.5 3L7 10.5L10 13.5L20.5 3H14.5Z" fill="#027DFD"/>
+                        <path d="M10 13.5L7 10.5L3 14.5L7 18.5L10 15.5L13 18.5L7 24.5L14.5 24.5L20.5 18.5L13 11L10 13.5Z" fill="#02569B"/>
+                      </svg>
+                    </div>
+
+                    {/* Node.js Logo */}
+                    <div style={{
+                      width: '50px',
+                      height: '50px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(51, 153, 51, 0.1)',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L3 7V17L12 22L21 17V7L12 2Z" stroke="#339933" strokeWidth="1.5" fill="none"/>
+                        <path d="M12 2V22M3 7L21 17M21 7L3 17" stroke="#339933" strokeWidth="1.5"/>
+                      </svg>
+                    </div>
+
+                    {/* Firebase Logo */}
+                    <div style={{
+                      width: '50px',
+                      height: '50px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(255, 202, 40, 0.1)',
+                      borderRadius: '12px',
+                      transition: 'all 0.3s ease'
+                    }}>
+                      <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 16L8 3L12 9L9 12L5 16Z" fill="#FFA000"/>
+                        <path d="M12 9L15 3L17 8L12 20L5 16L12 9Z" fill="#FFCA28"/>
+                        <path d="M17 8L19 13L12 20L17 8Z" fill="#FFA000"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-5 order-lg-2">
