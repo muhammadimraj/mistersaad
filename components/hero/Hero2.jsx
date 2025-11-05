@@ -75,69 +75,102 @@ export default function Hero2({ light = false }) {
             <div className="col-lg-7 order-lg-1">
               <div className="inner">
                 {/* Google Rating Badge */}
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '15px',
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  padding: '12px 25px',
-                  borderRadius: '50px',
-                  marginBottom: '25px',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
-                  backdropFilter: 'blur(10px)'
-                }} className="tmp-scroll-trigger tmp-fade-in animation-order-1">
+                <div 
+                  className="tmp-scroll-trigger tmp-fade-in animation-order-1 google-rating-badge"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: 'clamp(8px, 2vw, 15px)',
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    padding: 'clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px)',
+                    borderRadius: '50px',
+                    marginBottom: 'clamp(15px, 3vw, 25px)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+                    backdropFilter: 'blur(10px)',
+                    maxWidth: '100%'
+                  }}
+                >
                   {/* Google Logo */}
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '8px'
+                    gap: 'clamp(5px, 1vw, 8px)',
+                    minWidth: 'fit-content'
                   }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg 
+                      width="clamp(18, 4vw, 24)" 
+                      height="clamp(18, 4vw, 24)" 
+                      viewBox="0 0 24 24" 
+                      fill="none"
+                      style={{ width: 'clamp(18px, 4vw, 24px)', height: 'clamp(18px, 4vw, 24px)' }}
+                    >
                       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
                       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                     </svg>
                     <span style={{
-                      fontSize: '16px',
+                      fontSize: 'clamp(14px, 3vw, 16px)',
                       fontWeight: '700',
-                      color: '#1a1a1a'
+                      color: '#1a1a1a',
+                      whiteSpace: 'nowrap'
                     }}>Google</span>
                   </div>
 
                   {/* Divider */}
-                  <div style={{
-                    width: '1px',
-                    height: '30px',
-                    background: 'rgba(0, 0, 0, 0.1)'
-                  }}></div>
+                  <div 
+                    className="rating-divider"
+                    style={{
+                      width: '1px',
+                      height: 'clamp(20px, 4vw, 30px)',
+                      background: 'rgba(0, 0, 0, 0.1)',
+                      flexShrink: 0
+                    }}
+                  ></div>
 
                   {/* Rating - All in one line */}
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '8px'
+                    gap: 'clamp(5px, 1.5vw, 8px)',
+                    flexWrap: 'wrap',
+                    flex: '1',
+                    minWidth: 'fit-content'
                   }}>
                     <span style={{
-                      fontSize: '18px',
+                      fontSize: 'clamp(14px, 3vw, 18px)',
                       fontWeight: '700',
-                      color: '#1a1a1a'
-                    }}>4.9/5 Rating</span>
+                      color: '#1a1a1a',
+                      whiteSpace: 'nowrap'
+                    }}>4.9/5</span>
                     <div style={{
                       display: 'flex',
-                      gap: '2px'
+                      gap: '2px',
+                      flexShrink: 0
                     }}>
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#FFA500">
+                        <svg 
+                          key={i} 
+                          width="clamp(14, 3vw, 18)" 
+                          height="clamp(14, 3vw, 18)" 
+                          viewBox="0 0 24 24" 
+                          fill="#FFA500"
+                          style={{ width: 'clamp(14px, 3vw, 18px)', height: 'clamp(14px, 3vw, 18px)' }}
+                        >
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                       ))}
                     </div>
-                    <span style={{
-                      fontSize: '14px',
-                      fontWeight: '600',
-                      color: '#666'
-                    }}>
+                    <span 
+                      className="reviews-text"
+                      style={{
+                        fontSize: 'clamp(11px, 2.5vw, 14px)',
+                        fontWeight: '600',
+                        color: '#666',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
                       500+ Reviews
                     </span>
                   </div>

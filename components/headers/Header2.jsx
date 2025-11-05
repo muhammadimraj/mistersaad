@@ -3,11 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Nav2 from "./Nav2";
+import MobileMenu from "./HeaderMobile";
 import { openSidebar } from "@/utils/toggleSidebar";
 import { openMobilemenu } from "@/utils/toggleMobilemenu";
 import { navItemsDefault } from "@/data/menu";
 export default function Header2({ navItems = navItemsDefault }) {
   return (
+    <>
     <header className="tmp-header-area-start header-one header--sticky header--transparent">
       <div className="container">
         <div className="row">
@@ -77,5 +79,7 @@ export default function Header2({ navItems = navItemsDefault }) {
         </div>
       </div>
     </header>
+    <MobileMenu navItems={navItems} />
+    </>
   );
 }

@@ -3,11 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Nav2 from "./Nav2";
 import Link from "next/link";
+import MobileMenu from "./HeaderMobile";
 import { openSidebar } from "@/utils/toggleSidebar";
 import { openMobilemenu } from "@/utils/toggleMobilemenu";
 import { navItemsDefault } from "@/data/menu";
 export default function Header3({ navItems = navItemsDefault }) {
   return (
+    <>
     <header className="header-full-width header--sticky">
       <div className="container-fluid-13">
         <div className="row">
@@ -84,5 +86,7 @@ export default function Header3({ navItems = navItemsDefault }) {
         </div>
       </div>
     </header>
+    <MobileMenu navItems={navItems} />
+    </>
   );
 }

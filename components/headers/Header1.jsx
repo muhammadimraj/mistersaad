@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "./Nav";
+import MobileMenu from "./HeaderMobile";
 import { openMobilemenu } from "@/utils/toggleMobilemenu";
 import { navItemsDefault } from "@/data/menu";
 
@@ -69,6 +70,7 @@ export default function Header1({ navItems = navItemsDefault }) {
         </div>
         {/* header mid area end */}
       </header>
+      <MobileMenu navItems={navItems} />
     </>
   );
 }
